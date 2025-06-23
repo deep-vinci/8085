@@ -1,0 +1,21 @@
+JMP START
+
+START:
+  MVI A, 0fH
+
+  CALL SQUARE
+  HLT
+
+SQUARE:
+  MOV B, A
+  MOV C, B
+
+  DCR B
+  
+  LOOP:
+  ADD C
+  DCR B
+  JNZ LOOP
+
+  RET
+  
